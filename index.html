@@ -1,498 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Backless V-Neck Dress — Premium | Vita</title>
-
-  <!-- Inline CSS (Blush Sand, premium & feminine) -->
-  <style>
-    :root{
-      --bg: #FBF6F4;            /* very light blush/cream */
-      --card: #fff7f6;          /* soft card */
-      --muted: #9b8b87;         /* muted text */
-      --accent: #e9cfc8;        /* blush */
-      --accent-2: #f6e9e6;      /* lighter blush */
-      --gold: #caa878;          /* soft gold for premium accents */
-      --shadow: 0 6px 20px rgba(18,12,10,0.06);
-      --radius: 14px;
-      --maxwidth: 980px;
-    }
-
-    /* Base */
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: "Calibri", "Trebuchet MS", Arial, sans-serif;
-      background: linear-gradient(180deg, var(--bg), #fff);
-      color:#2c2a29;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-    }
-
-    .container{
-      max-width: var(--maxwidth);
-      margin: 28px auto;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    /* Top hero image (1) */
-    .hero{
-      background: linear-gradient(180deg, rgba(250,245,243,0.6), rgba(255,255,255,0.4));
-      border-radius: var(--radius);
-      overflow: visible;
-      box-shadow: var(--shadow);
-      padding: 18px;
-      display:block;
-    }
-    .hero img{
-      display:block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      object-fit: contain;
-      /* preserve original/image intrinsic size but limit to container */
-    }
-
-    /* Title & description (2) */
-    .meta {
-      text-align: center;
-      padding: 18px 12px;
-    }
-    .title{
-      font-size: 28px;
-      letter-spacing: 0.6px;
-      margin: 8px 0 6px;
-      font-weight:700;
-      color:#2b2220;
-    }
-    .subtitle{
-      font-size: 15px;
-      color:var(--muted);
-      margin-bottom: 8px;
-    }
-    .lead{
-      font-size: 15px;
-      color:#3b2f2d;
-      margin-top: 12px;
-      max-width: 920px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    /* Two-column details area */
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:16px;
-      margin-top:18px;
-    }
-
-    /* product details card (3) */
-    .card{
-      background: linear-gradient(180deg, var(--card), #fff);
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: 0 6px 18px rgba(14,10,9,0.04);
-    }
-    .specs{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      color:#403737;
-      font-size:14px;
-    }
-    .spec-item{flex: 1 1 220px;}
-    .spec-item strong{display:block; color:#241b1a; font-weight:700; margin-bottom:6px;}
-    .spec-note{color:var(--muted); font-size:13px;}
-
-    /* product images with captions (4) */
-    .thumbs{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-    .thumb{
-      flex: 1 1 200px;
-      text-align:center;
-      background: var(--accent-2);
-      padding:10px;
-      border-radius:10px;
-    }
-    .thumb img{max-width:100%; height:auto; display:block; margin:0 auto; border-radius:8px;}
-    .thumb p{margin:8px 0 0; font-size:13px; color:#4a3f3d;}
-
-    /* color variant gallery (5) */
-    .variants{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-      align-items:center;
-    }
-    .variant{
-      width:85px;
-      text-align:center;
-      background:linear-gradient(180deg,#fff,#fff9f8);
-      padding:8px;
-      border-radius:10px;
-      box-shadow: 0 6px 16px rgba(18,12,10,0.04);
-    }
-    .variant img{width:72px; height:auto; display:block; margin:0 auto; border-radius:8px;}
-    .variant p{margin:8px 0 0; font-size:13px; color:#3b2f2d; font-weight:600;}
-
-    /* price & promo (9) */
-    .promo-wrap{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
-      padding:14px;
-      margin-top:14px;
-      border-radius:12px;
-      background: linear-gradient(90deg, rgba(234,210,202,0.16), rgba(255,255,255,0.02));
-      border: 1px solid rgba(202,168,120,0.06);
-    }
-    .price-left{display:flex; gap:10px; align-items:flex-start; flex:1;}
-    .price-badge{
-      background: linear-gradient(180deg,var(--accent),var(--accent-2));
-      padding:10px 14px;
-      border-radius:12px;
-      text-align:center;
-      min-width:150px;
-      box-shadow: 0 8px 18px rgba(202,168,120,0.08);
-    }
-    .price-badge .today{font-size:12px; color:#6a4f47;}
-    .price-badge .promo-price{display:block; font-size:22px; font-weight:800; color:#2a1b1a; margin-top:6px;}
-    .price-info{font-size:14px; color:#3b2f2d;}
-    .price-old{font-size:13px; color:var(--muted); text-decoration:line-through;}
-    .you-save{font-weight:700; color:#7a4d4d;}
-
-    /* promo countdown (7) */
-    .countdown{
-      text-align:center;
-      padding:10px 12px;
-      border-radius:10px;
-      background:#fff;
-      border:1px solid rgba(0,0,0,0.03);
-      box-shadow: 0 6px 14px rgba(12,8,7,0.03);
-      min-width:220px;
-    }
-    .countdown .label{font-size:12px;color:var(--muted);}
-    .countdown .time{font-size:18px; font-weight:800; margin-top:6px; color:#2b2220;}
-
-    /* order area (10 & 11) */
-    .order-section{
-      margin-top:18px;
-      display:grid;
-      gap:12px;
-      grid-template-columns: 1fr;
-    }
-
-    .order-visual{
-      position:relative;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow: var(--shadow);
-    }
-    .order-visual img{display:block; width:100%; height:auto;}
-    .promo-sticker{
-      position:absolute;
-      left:14px;
-      top:14px;
-      background: linear-gradient(180deg,#ffd7b8,#f7b98e);
-      padding:8px 12px;
-      border-radius:10px;
-      font-weight:800;
-      color:#6b351d;
-      box-shadow: 0 6px 14px rgba(107,53,29,0.12);
-      transform: rotate(-6deg);
-    }
-    .promo-sticker small{display:block; font-size:11px; font-weight:600; color:#5a2f21;}
-
-    .order-card{
-      background: linear-gradient(180deg,#fff,#fff);
-      border-radius:12px;
-      padding:14px;
-      box-shadow: 0 8px 26px rgba(18,12,10,0.06);
-    }
-
-    /* notes */
-    .notes{font-size:13px; color:var(--muted); margin-top:10px;}
-    .notes ul{padding-left:18px; margin:6px 0;}
-    .note-pill{display:inline-block; padding:6px 10px; border-radius:8px; background:rgba(202,168,120,0.08); color:#6b4d3b; font-weight:700; font-size:13px;}
-
-    /* testimonials (6) */
-    .testimonials{
-      margin-top:18px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .testi{
-      flex:1 1 260px;
-      background:linear-gradient(180deg,#fff,#fff9f8);
-      border-radius:12px;
-      padding:12px;
-      box-shadow: 0 6px 14px rgba(18,12,10,0.03);
-    }
-    .testi .who{font-weight:800; color:#3c2f2c; font-size:13px;}
-    .testi .stars{color:#caa878; margin:6px 0;}
-    .testi p{font-size:14px; color:#3b2f2d; margin:6px 0 0;}
-
-    /* responsive grid for larger screens */
-    @media(min-width:880px){
-      .grid{grid-template-columns: 1fr 340px;}
-      .order-section{grid-template-columns: 1fr 420px;}
-      .thumbs{flex-direction:column;}
-      .variants{justify-content:flex-start;}
-    }
-
-    /* mobile refinements */
-    @media(max-width:420px){
-      .title{font-size:22px;}
-      .price-badge{min-width:120px;}
-      .variant{width:72px;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backless V-Neck Dress | Premium Lingerie</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Calibri', sans-serif;
+    background-color: #f8ece7;
+    color: #4a3c35;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    text-align: center;
+    color: #3d2f28;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff8f6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .section {
+    padding: 20px;
+  }
+  .desc {
+    text-align: center;
+    font-size: 17px;
+  }
+  .details {
+    background-color: #f9efea;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+  }
+  .details p {
+    margin: 6px 0;
+  }
+  .variants img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+  .variants p {
+    text-align: center;
+    font-weight: bold;
+  }
+  .testimoni {
+    background-color: #fff1ec;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .testimoni p {
+    font-style: italic;
+    border-left: 4px solid #e0a8a1;
+    padding-left: 10px;
+  }
+  .promo {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #fbe4df, #f7cfc7);
+    border-radius: 12px;
+    margin: 20px;
+  }
+  .promo h3 {
+    margin: 0;
+    color: #b03b54;
+  }
+  .countdown {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 8px;
+    color: #e44c7d;
+  }
+  .note {
+    background-color: #fff7f5;
+    border: 1px solid #f1d5cc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+  }
+  .price {
+    text-align: center;
+    background-color: #fdecea;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .price h3 {
+    color: #e15571;
+  }
+  .price .normal {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .form-section img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    h1 { font-size: 24px; }
+    .section { padding: 15px; }
+  }
+</style>
 </head>
 <body>
-  <main class="container" role="main" aria-labelledby="product-title">
 
-    <!-- 1. Gambar Utama -->
-    <section class="hero" aria-label="Gambar Utama Produk">
-      <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sd49410be71db4906bb48e9d6767b4d82N.jpg_960x960q75.jpg_.avif"
-           alt="Backless V-Neck Dress - gambar utama"
-           loading="eager">
-    </section>
+<div class="container">
 
-    <!-- 2. Judul dan Deskripsi -->
-    <section class="meta" aria-labelledby="product-title">
-      <h1 id="product-title" class="title">BACKLESS V-NECK DRESS</h1>
-      <div class="subtitle">✨ Anggun. Sexy. Elegan dalam satu sentuhan. ✨</div>
-      <div class="lead">
-        Tampil memikat dengan Backless V-neck Dress, lingerie bergaya Sweet Charming Babydoll yang dibuat dari <strong>Polyester Blends Lace Premium</strong> — bahan lembut, lentur, dan halus di kulit. Potongan V-neck dengan model backless memberikan kesan feminin sekaligus menggoda, cocok untuk menambah sentuhan romantis di momen spesialmu 💖<br><br>
-        Dilengkapi dengan tali leher yang bisa diatur (adjustable strap) agar pas di tubuh, serta bahan melar dan elastis yang nyaman untuk berbagai bentuk badan.
-      </div>
-    </section>
+  <!-- 1. Gambar utama -->
+  <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sd49410be71db4906bb48e9d6767b4d82N.jpg_960x960q75.jpg_.avif" alt="Backless V-Neck Dress">
 
-    <!-- 3 & 4: Detail produk + gambar -->
-    <section class="grid" aria-label="Detail produk dan gambar">
-      <div>
-        <div class="card">
-          <h3 style="margin-top:0;">Detail & Keunggulan Produk</h3>
-          <div class="specs" aria-hidden="false">
-            <div class="spec-item">
-              <strong>✨ Bahan</strong>
-              <div class="spec-note">Premium Polyester Blends Lace — lembut & nyaman</div>
-            </div>
-            <div class="spec-item">
-              <strong>💃 Model</strong>
-              <div class="spec-note">Sweet Charming Babydoll — backless & V-neck</div>
-            </div>
-            <div class="spec-item">
-              <strong>📏 Ukuran</strong>
-              <div class="spec-note">One Size (fit hingga ±80 kg)</div>
-            </div>
-            <div class="spec-item">
-              <strong>💞 Lebar Underbust</strong>
-              <div class="spec-note">±30–60 cm (melar hingga 100 cm)</div>
-            </div>
-            <div class="spec-item">
-              <strong>👗 Panjang Dress</strong>
-              <div class="spec-note">±83 cm (tali leher adjustable)</div>
-            </div>
-            <div class="spec-item">
-              <strong>🎁 Isi Paket</strong>
-              <div class="spec-note">1 pcs Lingerie + 1 pcs G-String</div>
-            </div>
-            <div class="spec-item">
-              <strong>💎 Feel</strong>
-              <div class="spec-note">Lembut, lentur, dan menonjolkan siluet tubuh dengan anggun</div>
-            </div>
-          </div>
+  <!-- 2. Judul & Deskripsi -->
+  <div class="section">
+    <h1>BACKLESS V-NECK DRESS</h1>
+    <p class="desc">✨ Anggun. Sexy. Elegan dalam satu sentuhan. ✨</p>
+    <p class="desc">Tampil memikat dengan <b>Backless V-neck Dress</b>, lingerie bergaya <b>Sweet Charming Babydoll</b> dari bahan <b>Premium Polyester Blends Lace</b> yang lembut, lentur, dan halus di kulit. Potongan V-neck dan model backless memberikan kesan feminin sekaligus menggoda 💖</p>
+  </div>
 
-          <!-- Product detail images (4) -->
-          <div class="thumbs" style="margin-top:12px;">
-            <figure class="thumb">
-              <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sc673d8cc78f5453da2f1bd782c7e8dd3g.jpg_960x960q75.jpg_.avif" alt="Detail 1 - backless">
-              <figcaption>Detail renda premium — halus di kulit</figcaption>
-            </figure>
+  <!-- 3. Detail & Keunggulan -->
+  <div class="section details">
+    <p>✨ Bahan: Premium Polyester Blends Lace</p>
+    <p>💃 Model: Sweet Charming Babydoll</p>
+    <p>📏 Ukuran: One Size (fit hingga ±80 kg)</p>
+    <p>💞 Lebar Underbust: ±30–60 cm (melar hingga 100 cm)</p>
+    <p>👗 Panjang Dress: ±83 cm (tali leher adjustable)</p>
+    <p>🎁 Isi Paket: 1 pcs Lingerie + 1 pcs G-String</p>
+    <p>💎 Feel: Lembut, lentur, dan menonjolkan siluet tubuh dengan anggun</p>
+  </div>
 
-            <figure class="thumb">
-              <img src="https://ae-pic-a1.aliexpress-media.com/kf/S39656eee04714336b23fdebfd32b3d8dg.jpg_960x960q75.jpg_.avif" alt="Detail 2 - potongan">
-              <figcaption>Potongan V-neck & backless yang anggun</figcaption>
-            </figure>
-          </div>
-        </div>
+  <!-- 4. Detail gambar -->
+  <div class="section">
+    <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sc673d8cc78f5453da2f1bd782c7e8dd3g.jpg_960x960q75.jpg_.avif" alt="">
+    <p class="desc">Detail renda halus dengan finishing premium.</p>
+    <img src="https://ae-pic-a1.aliexpress-media.com/kf/S39656eee04714336b23fdebfd32b3d8dg.jpg_960x960q75.jpg_.avif" alt="">
+    <p class="desc">Model backless memberikan kesan feminin dan menawan.</p>
+  </div>
 
-        <!-- 5. Varian Warna -->
-        <div class="card" style="margin-top:12px;">
-          <h3 style="margin-top:0;">Pilihan Warna</h3>
-          <div class="variants" role="list">
-            <div class="variant" role="listitem" aria-label="Hitam">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98u-lwe69trozwa668@resize_w450_nl.webp" alt="Varian Hitam">
-              <p>HITAM</p>
-            </div>
-            <div class="variant" role="listitem" aria-label="Pink">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-lwe69trp1aumb3@resize_w450_nl.webp" alt="Varian Pink">
-              <p>PINK</p>
-            </div>
-            <div class="variant" role="listitem" aria-label="Putih">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-lwe69trp2pf2a8@resize_w450_nl.webp" alt="Varian Putih">
-              <p>PUTIH</p>
-            </div>
-            <div class="variant" role="listitem" aria-label="Maroon">
-              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98y-lmzj75u71v5zb9@resize_w450_nl.webp" alt="Varian Maroon">
-              <p>MAROON</p>
-            </div>
-          </div>
-        </div>
+  <!-- 5. Varian warna -->
+  <div class="section variants">
+    <h2>✨ Pilihan Warna ✨</h2>
+    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98u-lwe69trozwa668@resize_w450_nl.webp">
+    <p>HITAM</p>
+    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-lwe69trp1aumb3@resize_w450_nl.webp">
+    <p>PINK</p>
+    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-lwe69trp2pf2a8@resize_w450_nl.webp">
+    <p>PUTIH</p>
+    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98y-lmzj75u71v5zb9@resize_w450_nl.webp">
+    <p>MAROON</p>
+  </div>
 
-        <!-- 6. Testimoni -->
-        <div class="card" style="margin-top:12px;">
-          <h3 style="margin-top:0;">Testimoni Pelanggan</h3>
-          <div class="testimonials" aria-live="polite">
-            <article class="testi" aria-label="Testimoni 1">
-              <div class="who">Nadia, Bandung</div>
-              <div class="stars">★★★★★</div>
-              <p>"Bahan nya bagus banget, lembut dan nyaman. Pas dipakai malam anniversary suami saya langsung bilang anggun banget. Size one size sangat melar, cocok untuk saya yg ±68 kg."</p>
-            </article>
+  <!-- 6. Testimoni -->
+  <div class="section testimoni">
+    <h2>💬 Testimoni Pelanggan</h2>
+    <p>“Bahannya lembut banget, nyaman dipakai dan kelihatan elegan di badan 😍” — <b>Rina, Jakarta</b></p>
+    <p>“Suami langsung bilang cantik banget pas lihat aku pakai ini 😳❤️ Worth it banget!” — <b>Dewi, Surabaya</b></p>
+    <p>“Ukuran pas, bahan premium, dan pengiriman cepat! Aku kasih bintang 5✨” — <b>Novi, Bandung</b></p>
+  </div>
 
-            <article class="testi" aria-label="Testimoni 2">
-              <div class="who">Lina, Surabaya</div>
-              <div class="stars">★★★★★</div>
-              <p>"Kualitas jahitan rapi, renda nya terlihat premium. Fast response dari penjual dan paket sampai 3 hari. Akan repeat order warna lain."</p>
-            </article>
+  <!-- 7. Countdown Promo -->
+  <div class="promo">
+    <h3>🔥 PROMO SPESIAL HARI INI 🔥</h3>
+    <p>Dapatkan diskon spesial untuk hari ini saja! Harga akan kembali normal setelah:</p>
+    <div class="countdown" id="countdown">00:00:00</div>
+  </div>
 
-            <article class="testi" aria-label="Testimoni 3">
-              <div class="who">Dewi, Jakarta</div>
-              <div class="stars">★★★★★</div>
-              <p>"Modelnya manis & seksi tanpa berlebihan. Tali bahu bisa diatur jadi fit banget. Worth the price!"</p>
-            </article>
-          </div>
-        </div>
+  <!-- 8. Note -->
+  <div class="note">
+    <p>🚚 Pengiriman 2 - 4 Hari Setelah Pemesanan</p>
+    <p>📦 Mohon Isi Alamat Dengan Lengkap</p>
+    <p>💯 100% Product Original</p>
+  </div>
 
-      </div>
+  <!-- 9. Harga -->
+  <div class="price">
+    <h3>HARGA PROMO: Rp 185.000</h3>
+    <p class="normal">Harga Normal: Rp 245.000</p>
+    <p>💖 Anda Hemat Rp 60.000 💖</p>
+  </div>
 
-      <!-- Right column: price, countdown, order -->
-      <aside>
-        <!-- 9. Harga + countdown -->
-        <div class="card">
-          <div class="promo-wrap" role="region" aria-label="Harga Promo">
-            <div class="price-left">
-              <div class="price-badge" aria-hidden="false">
-                <div class="today">PROMO SPESIAL HARI INI</div>
-                <div class="promo-price">Rp 185.000</div>
-                <div style="font-size:12px; margin-top:6px;" class="price-old">Harga Normal <span class="price-old">Rp 245.000</span></div>
-              </div>
-              <div class="price-info">
-                <div style="font-weight:700; font-size:15px; margin-bottom:6px;">Dapatkan Diskon Spesial Untuk Hari Ini Saja</div>
-                <div class="price-old">Harga Normal: <span style="text-decoration:line-through; color:var(--muted);">Rp 245.000</span></div>
-                <div style="margin-top:8px;"><span class="you-save">Anda Hemat Rp 60.000</span></div>
-              </div>
-            </div>
+  <!-- 10. Gambar sebelum form -->
+  <div class="form-section section">
+    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-lmzj75u77hgfa1.webp" alt="Promo Gambar">
+  </div>
 
-            <div class="countdown" aria-live="polite" aria-atomic="true">
-              <div class="label">PROMO BERAKHIR DALAM</div>
-              <div id="countdown-timer" class="time">--:--:--</div>
-            </div>
-          </div>
+  <!-- 11. Form pemesanan -->
+  <div class="section">
+    <!-- OrderOnline Embed Code -->
+    (tempat form embed kamu)
+  </div>
 
-          <!-- 8. Note pemesanan & pengiriman -->
-          <div class="notes" style="margin-top:12px;">
-            <div class="note-pill">Pengiriman 2 - 4 Hari</div>
-            <ul>
-              <li>Pengiriman 2 - 4 Hari Setelah Pemesanan</li>
-              <li>Mohon Isi Alamat Dengan Lengkap</li>
-              <li>100% Product Original</li>
-            </ul>
-          </div>
-        </div>
+</div>
 
-        <!-- 10 & 11: Gambar di atas form + Form embed -->
-        <div class="order-section" style="margin-top:12px;">
-          <div class="order-visual">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-lmzj75u77hgfa1.webp" alt="Gambar produk untuk form">
-            <div class="promo-sticker" aria-hidden="true">
-              <div style="font-size:14px;">DISKON HARI INI</div>
-              <small>Hemat Rp 60.000</small>
-            </div>
-          </div>
+<script>
+  // Countdown Timer
+  const countdown = document.getElementById("countdown");
+  const endTime = new Date();
+  endTime.setHours(endTime.getHours() + 6);
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = endTime - now;
+    if (distance < 0) { countdown.innerHTML = "Promo Berakhir"; return; }
+    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+    const seconds = Math.floor((distance % (1000*60))/1000);
+    countdown.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+  }
+  setInterval(updateCountdown, 1000);
+</script>
 
-          <div class="order-card" id="order-card">
-            <h3 style="margin-top:0;">Form Pemesanan</h3>
-            <p style="margin:0 0 8px 0; color:var(--muted);">Isi form di bawah untuk melakukan pemesanan. Klik "Klik untuk pemesanan" setelah muncul.</p>
-
-            <!-- EMBED FORM (11) — gunakan persis kode yang diberikan -->
-            <!-- OrderOnline Embed Code - v8.0.4 -->
-            <div class="ooef">
-              <form class="orderonline-embed-form" data-username="vita" data-product-slug="backless-v-neck-dress" data-product-id="68fa325eddebc0a5f903d86b" id="oo-embed-form-backless-v-neck-dress-1423" data-origin="orderonline">
-                <div class="ooef-loader">
-                  <style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
-              </form>
-            </div>
-            <script>
-              if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; }
-              try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; }
-                } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; }
-                xEmbedInit(window);
-                ooe('setup', 'redirect', 'https://vita.orderonline.id');
-                ooe('init', '5f1a8627a9bf8058b0424f32', '68fa325eddebc0a5f903d86b', '68fa325eddebc0a5f903d86c', 'oo-embed-form-backless-v-neck-dress-1423', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false});
-                if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); }
-            } catch (e) { xLogError(e); throw e; }
-            </script>
-            <!-- End OrderOnline Embed Code -->
-          </div>
-        </div>
-
-      </aside>
-    </section>
-
-    <!-- Footer notes -->
-    <footer style="margin-top:18px; text-align:center; color:var(--muted); font-size:13px;">
-      © <span id="year"></span> Vita • Semua hak dilindungi.
-    </footer>
-  </main>
-
-  <!-- Inline JS: countdown + small helpers -->
-  <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Countdown timer: promo ends today at 23:59:59 local time (browser)
-    (function(){
-      function pad(n){ return n < 10 ? '0' + n : n; }
-      function updateCountdown(){
-        var now = new Date();
-        var end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
-        var diff = end - now;
-        if(diff < 0) {
-          // if already past midnight, set to next day 23:59:59
-          end = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 23, 59, 59);
-          diff = end - now;
-        }
-        var s = Math.floor(diff/1000);
-        var hrs = Math.floor(s/3600); s -= hrs*3600;
-        var mins = Math.floor(s/60); s -= mins*60;
-        var timeStr = pad(hrs) + ':' + pad(mins) + ':' + pad(s);
-        var el = document.getElementById('countdown-timer');
-        if(el) el.textContent = timeStr;
-      }
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    })();
-
-    // accessibility: focus to embed form when loaded
-    window.addEventListener('ooe:ready', function(){
-      var form = document.getElementById('oo-embed-form-backless-v-neck-dress-1423');
-      if(form) form.setAttribute('tabindex','-1');
-    });
-  </script>
 </body>
 </html>
